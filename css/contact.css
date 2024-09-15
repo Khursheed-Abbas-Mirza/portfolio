@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.fourthsection{
+    width: auto;
+    height: auto;
+    background-color: rgb(212, 170, 251);
+    box-sizing: border-box;
+    padding: 4rem;
+   bottom: 100px;
+}
+.mycontact{
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+    padding-left: 30px;
+    
+   
+}
+.c-item{
+    width: 400px;
+    height: 200px;
+    margin-bottom:30px;
+    margin-top: 20px;
+    margin-right:50px;
+    border-radius: 10px;
+    background-color: lightgreen;
+}
+.fourthsection .mycontact p{
+    text-align: center;
+}
+.c-item img{
+    margin-top: 20px;
+    margin-left: 37%;
+
+}
+@media only screen and (max-width:360px){
+    .mycontact{
+        display: block;
+    }
+    .c-item{
+        display: block;
+        margin-left: 30%;
+    }
+}
+@media only screen and (max-width:712px){
+    .mycontact{
+        display: block;
+    }
+    .c-item{
+        display: block;
+        margin-left: 30%;
+    }
+}
+footer{
+    height: 30px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}

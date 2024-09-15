@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.thirdsection{
+    padding: 6rem;
+    width: fit-content;
+    height: auto;
+    background-color: lightyellow;
+    box-sizing: border-box;
+}
+.myskills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 4rem;
+    height: auto;
+}
+@media only screen and (max-width:360px ){
+    .myprojects{
+        display: block;
+        margin-left: 30%;
+    }
+    .mycard{
+        margin-bottom: 30px;
+    }
+}
+@media only screen and (max-width:712px ){
+    .myprojects{
+        display: block;
+        margin-left: 30%;
+    }
+    .mycard{
+        margin-bottom: 30px;
+    }
+}
