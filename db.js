@@ -1,8 +1,9 @@
 // const {Sequelize,DataTypes}=require("sequelize")
 const {Sequelize,DataTypes}=require("sequelize")
+const pg=require("pg")
 require("dotenv").config()
 const sequelize=new Sequelize(process.env.DB_URL,{
-    dialect:"postgres",
+    dialect:pg,
     ssl:true,
     logging:false
 })
