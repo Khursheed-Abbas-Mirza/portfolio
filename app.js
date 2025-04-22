@@ -1,6 +1,6 @@
 const express=require("express")
 const app=express()
-
+const serverless=require("serverless-http")
 const {sequelize}=require("./db")
 const session=require("express-session")
 const dotenv=require("dotenv")
@@ -10,11 +10,15 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store)
 const githubuser=require("./routes/gituser")
 const passport = require("passport")
 const path=require("path")
-const sessionstore=new SequelizeStore({db:sequelize})
+
+    
+    const sessionstore=new SequelizeStore({db:sequelize})
+
 const cors=require("cors")
 app.use(express.json())
 app.use(cors({}))
 app.use("/assets",express.static(path.join(__dirname, "assets")))
+app.use("/views",express.static(path.join(__dirname, "views")))
 app.use(session({
     name:"portfolio",
     saveUninitialized:false,
@@ -73,5 +77,7 @@ app.get("/logout",(req,res)=>{
         
 })
 })
-
-module.exports = app;
+app.listen(3000,()=>{
+    console.log("Listening on port 3000")
+})
+module.exports.handler = serverless(app);
