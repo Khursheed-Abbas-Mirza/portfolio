@@ -6,7 +6,7 @@ const {v4:uuid}=require("uuid")
 passport.use("github-signup",new Strategy({
     clientID:process.env.CLIENT_ID,
     clientSecret:process.env.CLIENT_SECRET,
-    callbackURL:"/github/user/callback?action=signup",
+    callbackURL:"https://portfolio-khursheed-abbas-mirzas-projects.vercel.app/github/user/callback?action=signup",
 },async(accesstoken,refreshtoken,profile,done)=>{
     const username=profile.username
     const githubId=profile.id 
@@ -35,7 +35,7 @@ passport.use("github-signup",new Strategy({
 passport.use("github-signin",new Strategy({
     clientID:process.env.CLIENT_ID,
     clientSecret:process.env.CLIENT_SECRET,
-    callbackURL:"/github/user/callback?action=signin",
+    callbackURL:"https://portfolio-khursheed-abbas-mirzas-projects.vercel.app/github/user/callback?action=signin",
 },async(accesstoken,refreshtoken,profile,done)=>{
     const username=profile.username
     const githubId=profile.id 
